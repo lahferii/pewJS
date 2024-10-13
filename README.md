@@ -6,6 +6,7 @@ A minimal boilerplate for creating REST API with NodeJS
 - Hot Module Reload
 - Simple Routing
 - Response Formatter
+- Opinionated Structure
 
 ## Run On Development
 ```bash
