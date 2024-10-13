@@ -1,8 +1,10 @@
 {
-  "name": "pewjs",
+  "name": "peyi.js",
   "version": "1.0.0",
   "description": "Boilerplate for minimal and simple REST API with NodeJS",
-  "main": "app.js",
+  "export": {
+    ".": "app.js"
+  },
   "type": "module",
   "scripts": {
     "prod": "node --env-file=.env app.js",
