@@ -1,6 +1,6 @@
 import http from "http"
 
-export default class RouteHandling{
+class RouteHandling{
   #routes = []
   #server = null
 
@@ -11,7 +11,14 @@ export default class RouteHandling{
       })
       
       if(passedRoute){
-        passedRoute.controller(request, response)
+        if(passedRoute.method == "GET"){
+          passedRoute.controller(request, response)
+        } else {
+          request.addListener("data", (data) => {
+            const requestData = JSON.parse(data)
+            passedRoute.controller(requestData, response)
+          })
+        }
       } else {
         response.statusCode = 404
         response.end("Url Not Found")
@@ -53,3 +60,7 @@ export default class RouteHandling{
     })
   }
 }
+
+const router = new RouteHandling()
+
+export { router, RouteHandling }

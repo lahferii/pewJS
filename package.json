@@ -1,31 +1,32 @@
 {
-  "name": "peyi.js",
-  "version": "1.0.0",
-  "description": "Boilerplate for minimal and simple REST API with NodeJS",
-  "export": {
-    ".": "app.js"
+  "name": "peyijs",
+  "version": "1.0.2",
+  "description": "A Library to develop minimal and simple REST API with NodeJS",
+  "exports": {
+    ".": "./app.js",
+    "./router": "./router/router.js",
+    "./http-response": "./httpResponse/httpResponse.js"
   },
   "type": "module",
   "scripts": {
-    "prod": "node --env-file=.env app.js",
-    "dev": "nodemon --env-file=.env app.js"
+    "init": "touch app.js && touch .env",
+    "dev": "nodemon --env-file=.env index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lahferii/pewJS.git"
+    "url": "git+https://github.com/lahferii/peyiJS.git"
   },
   "keywords": [
     "NodeJS",
     "boilerplate",
-    "minimal",
-    "simple"
+    "minimal"
   ],
   "author": "Peri Nurjaman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lahferii/pewJS/issues"
+    "url": "https://github.com/lahferii/peyiJS/issues"
   },
-  "homepage": "https://github.com/lahferii/pewJS#readme",
+  "homepage": "https://github.com/lahferii/peyiJS#readme",
   "devDependencies": {
     "nodemon": "^3.1.7"
   }

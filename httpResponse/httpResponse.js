@@ -1,4 +1,4 @@
-export default class HttpResponse{
+class HttpResponse{
   #jsonFormat = {
     "meta": {
       "code": null,
@@ -28,3 +28,7 @@ export default class HttpResponse{
     return JSON.stringify(this.#jsonFormat)
   }
 }
+
+const htres = new HttpResponse()
+
+export {htres, HttpResponse}
